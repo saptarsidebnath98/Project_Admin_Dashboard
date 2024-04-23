@@ -1,38 +1,325 @@
-html, body {
-    margin: 0%;
-    padding: 0%;
+html,
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
-    height: 100vh;
-    width: 100vw;
+ul {
+  list-style-type: none;
 }
-.header{
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-}
-.sidebar{
-    background-color: rgb(76, 148, 255);
-}
-.main{
-    background-color: rgb(206, 206, 206);
-}
-/*--------------------------------------------------------------------------------------------------------------*/
-.container{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
-
-    resize: both;
-    overflow: auto;
+.container {
+  height: 100vh;
+  width: 100vw;
 }
 .header {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+  box-shadow: 2px 3px 10px rgb(170, 170, 170);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.headerItems {
+  height: 100%;
+}
+.navbar {
+  background-color: white;
+}
+.search-icon {
+  padding-right: 10px;
+}
+.search-bar > div {
+  height: max(20px, 50%);
+  width: max(100px, 80%);
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 20px;
+}
+.nav-right {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.nav-right > .navItems {
+  font: 1em;
+  font-weight: 900;
+}
+.menubar {
+  background-color: white;
+}
+.menu-left {
+}
+.photo-div {
+  padding-right: 20px;
+}
+.name > p {
+  margin: 0%;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.menu-right {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.menu-right > .menu-btns {
+  background-color: rgb(33, 80, 236);
+
+  height: 60%;
+
+  font-size: 0.7em;
+  border-radius: 20px;
+  color: white;
+  font-weight: 900;
+  border: none;
 }
 .sidebar {
-    grid-column: 1 / 2 ;
-    grid-row: 1 / 3;
+  background-color: rgb(33, 80, 236);
+  color: white;
+}
+.sideUpper {
+  font-size: 1.5em;
+  font-weight: 900;
 }
 .main {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+  background-color: rgb(230, 230, 230);
+}
+.mainleft {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+.card-container {
+  width: 90%;
+  padding: 10px;
+}
+.card-items {
+  background: linear-gradient(to right, rgb(255, 230, 86) 1%, white 10%);
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 10px black;
+}
+.main-right-up {
+
+  width: 80%;
+  height: 90%;
+}
+.main-right-down {
+  
+  width: 80%;
+  height: 90%;
+}
+.up-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-left: 10px;
+  box-shadow: 2px 2px 10px black;
+}
+.up-card > .up-card-items {
+  font-size: 0.7rem;
+  padding: 5px 2px;
+}
+.up-card-items > hr {
+  width: 80%;
+  color: black;
+}
+.down-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+}
+.down-card {
+  padding: 10px 10px;
+}
+.down-card-items {
+  font-size: 0.7rem;
+}
+.down-card-names > p {
+  margin: 0px;
+}
+/*---------------------------------icon & logo----------------------------------------------------------------*/
+#wolfLogo {
+  width: 70px;
+  height: auto;
+}
+#dashbdIcn {
+    padding-right: 10px;
+    width: 50px;
+    height: auto;
+}
+.icon {
+  width: 25px;
+  height: auto;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  grid-template-rows: 1fr 4fr;
+
+  resize: both;
+  overflow: auto;
+}
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.headerItems {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: auto;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+}
+.nav-left {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+.search-bar {
+  display: grid;
+  justify-items: start;
+  align-items: center;
+}
+.sideUpper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.search-icon {
+  display: grid;
+  justify-content: end;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.menubar {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-rows: auto;
+}
+.menu-left {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.photo-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.menu-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.sidebar {
+  display: grid;
+  grid-template-rows: 1fr 5fr 4fr;
+  grid-template-columns: auto;
+}
+.sideMiddle ul,
+.sideLower ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sideMiddle ul > li,
+.sideLower ul > li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+
+  resize: both;
+  overflow: auto;
+}
+.mainleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card-container {
+  flex: 1;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
+  row-gap: 20px;
+  column-gap: 50px;
+
+  resize: both;
+  overflow: auto;
+}
+.card-items {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-items: center;
+}
+.card-items-icon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.mainright {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  row-gap: 1px;
+}
+.main-right-up {
+  display: flex;
+  flex-direction: column;
+}
+.main-right-down {
+  display: flex;
+  flex-direction: column;
+}
+.up-card {
+  flex: 1;
+}
+.up-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.down-card {
+  flex: 1;
+}
+.down-card {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+}
+.down-card-items {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
